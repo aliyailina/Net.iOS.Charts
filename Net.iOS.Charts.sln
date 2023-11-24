@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Net.iOS.Charts", "Net.iOS.Charts\Net.iOS.Charts.csproj", "{900F316F-2DE7-4BC0-8ED5-9747E02510EE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Net.iOS.Charts.Sample", "Net.iOS.Charts.Sample\Net.iOS.Charts.Sample.csproj", "{18613095-7BC4-4679-93E3-EB59A38479D7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{900F316F-2DE7-4BC0-8ED5-9747E02510EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{900F316F-2DE7-4BC0-8ED5-9747E02510EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{900F316F-2DE7-4BC0-8ED5-9747E02510EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18613095-7BC4-4679-93E3-EB59A38479D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18613095-7BC4-4679-93E3-EB59A38479D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18613095-7BC4-4679-93E3-EB59A38479D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18613095-7BC4-4679-93E3-EB59A38479D7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
