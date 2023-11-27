@@ -7,10 +7,19 @@ public class AppDelegate : UIApplicationDelegate
 
     public override bool FinishedLaunching(UIApplication application, NSDictionary launchOptions)
     {
-        // create a new window instance based on the screen size
         Window = new UIWindow(UIScreen.MainScreen.Bounds);
 
-        // make the window visible
+        var vc = new DemoListViewController();
+        var nvc = new UINavigationController(vc);
+        if(UIDevice.CurrentDevice.CheckSystemVersion(13, 0))
+        {
+            var appearance = new UINavigationBarAppearance();
+            appearance.ConfigureWithOpaqueBackground();
+            nvc.NavigationBar.StandardAppearance = appearance;
+            nvc.NavigationBar.ScrollEdgeAppearance = appearance;
+        }
+    
+        Window.RootViewController = nvc;
         Window.MakeKeyAndVisible();
 
         return true;
