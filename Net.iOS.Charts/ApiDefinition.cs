@@ -686,7 +686,7 @@ namespace Net.iOS.Charts
 
 		// -(id _Nonnull)copyWithZone:(struct _NSZone * _Nullable)zone __attribute__((warn_unused_result("")));
 		[Export ("copyWithZone:")]
-		unsafe NSObject CopyWithZone ([NullAllowed] NSZone? zone);
+		unsafe NSObject Copy ([NullAllowed] NSZone? zone);
 	}
 
 	// @interface BarChartDataEntry : ChartDataEntry
@@ -761,7 +761,7 @@ namespace Net.iOS.Charts
 
 		// -(id _Nonnull)copyWithZone:(struct _NSZone * _Nullable)zone __attribute__((warn_unused_result("")));
 		[Export ("copyWithZone:")]
-		unsafe NSObject CopyWithZone ([NullAllowed] NSZone? zone);
+		unsafe NSObject Copy ([NullAllowed] NSZone? zone);
 	}
 
 	// protocol helper, see: https://github.com/xamarin/xamarin-macios/blob/main/docs/website/binding_types_reference_guide.md#protocols
@@ -1441,7 +1441,7 @@ namespace Net.iOS.Charts
 
 		// -(id _Nonnull)copyWithZone:(struct _NSZone * _Nullable)zone __attribute__((warn_unused_result("")));
 		[Export ("copyWithZone:")]
-		unsafe NSObject CopyWithZone ([NullAllowed] NSZone? zone);
+		unsafe NSObject Copy ([NullAllowed] NSZone? zone);
 	}
 
 	// @interface ChartDataSet : ChartBaseDataSet
@@ -1558,7 +1558,7 @@ namespace Net.iOS.Charts
 
 		// -(id _Nonnull)copyWithZone:(struct _NSZone * _Nullable)zone __attribute__((warn_unused_result("")));
 		[Export ("copyWithZone:")]
-		unsafe NSObject CopyWithZone ([NullAllowed] NSZone? zone);
+		unsafe NSObject Copy ([NullAllowed] NSZone? zone);
 	}
 
 	// @interface BarLineScatterCandleBubbleChartDataSet : ChartDataSet <BarLineScatterCandleBubbleChartDataSetProtocol>
@@ -1583,7 +1583,7 @@ namespace Net.iOS.Charts
 
 		// -(id _Nonnull)copyWithZone:(struct _NSZone * _Nullable)zone __attribute__((warn_unused_result("")));
 		[Export ("copyWithZone:")]
-		unsafe NSObject CopyWithZone ([NullAllowed] NSZone? zone);
+		unsafe NSObject Copy ([NullAllowed] NSZone? zone);
 
 		// -(instancetype _Nonnull)initWithEntries:(NSArray<ChartDataEntry *> * _Nonnull)entries label:(NSString * _Nonnull)label __attribute__((objc_designated_initializer));
 		[Export ("initWithEntries:label:")]
@@ -1634,7 +1634,7 @@ namespace Net.iOS.Charts
 
 		// -(id _Nonnull)copyWithZone:(struct _NSZone * _Nullable)zone __attribute__((warn_unused_result("")));
 		[Export ("copyWithZone:")]
-		unsafe NSObject CopyWithZone ([NullAllowed] NSZone? zone);
+		unsafe NSObject Copy ([NullAllowed] NSZone? zone);
 	}
 
 	// protocol helper, see: https://github.com/xamarin/xamarin-macios/blob/main/docs/website/binding_types_reference_guide.md#protocols
@@ -2689,7 +2689,7 @@ namespace Net.iOS.Charts
 
 		// -(id _Nonnull)copyWithZone:(struct _NSZone * _Nullable)zone __attribute__((warn_unused_result("")));
 		[Export ("copyWithZone:")]
-		unsafe NSObject CopyWithZone ([NullAllowed] NSZone? zone);
+		unsafe NSObject Copy ([NullAllowed] NSZone? zone);
 	}
 
 	// protocol helper, see: https://github.com/xamarin/xamarin-macios/blob/main/docs/website/binding_types_reference_guide.md#protocols
@@ -2752,7 +2752,7 @@ namespace Net.iOS.Charts
 
 		// -(id _Nonnull)copyWithZone:(struct _NSZone * _Nullable)zone __attribute__((warn_unused_result("")));
 		[Export ("copyWithZone:")]
-		unsafe NSObject CopyWithZone ([NullAllowed] NSZone? zone);
+		unsafe NSObject Copy ([NullAllowed] NSZone? zone);
 
 		// -(instancetype _Nonnull)initWithEntries:(NSArray<ChartDataEntry *> * _Nonnull)entries label:(NSString * _Nonnull)label __attribute__((objc_designated_initializer));
 		[Export ("initWithEntries:label:")]
@@ -2869,7 +2869,7 @@ namespace Net.iOS.Charts
 
 		// -(id _Nonnull)copyWithZone:(struct _NSZone * _Nullable)zone __attribute__((warn_unused_result("")));
 		[Export ("copyWithZone:")]
-		unsafe NSObject CopyWithZone ([NullAllowed] NSZone? zone);
+		unsafe NSObject Copy ([NullAllowed] NSZone? zone);
 	}
 
 	// protocol helper, see: https://github.com/xamarin/xamarin-macios/blob/main/docs/website/binding_types_reference_guide.md#protocols
@@ -3020,7 +3020,7 @@ namespace Net.iOS.Charts
 
 		// -(id _Nonnull)copyWithZone:(struct _NSZone * _Nullable)zone __attribute__((warn_unused_result("")));
 		[Export ("copyWithZone:")]
-		unsafe NSObject CopyWithZone ([NullAllowed] NSZone? zone);
+		unsafe NSObject Copy ([NullAllowed] NSZone? zone);
 
 		// -(instancetype _Nonnull)initWithEntries:(NSArray<ChartDataEntry *> * _Nonnull)entries label:(NSString * _Nonnull)label __attribute__((objc_designated_initializer));
 		[Export ("initWithEntries:label:")]
@@ -3789,7 +3789,7 @@ namespace Net.iOS.Charts
 		// @required -(CGFloat)getFillLinePositionWithDataSet:(id<LineChartDataSetProtocol> _Nonnull)dataSet dataProvider:(id<LineChartDataProvider> _Nonnull)dataProvider __attribute__((warn_unused_result("")));
 		[Abstract]
 		[Export ("getFillLinePositionWithDataSet:dataProvider:")]
-		nfloat DataProvider (ILineChartDataSetProtocol dataSet, ILineChartDataProvider dataProvider);
+		nfloat GetFillLinePositionWithDataSet(ILineChartDataSetProtocol dataSet, ILineChartDataProvider dataProvider);
 	}
 
 	// @interface ChartDefaultFillFormatter : NSObject <ChartFillFormatter>
@@ -4580,7 +4580,7 @@ namespace Net.iOS.Charts
 
 		// -(id _Nonnull)copyWithZone:(struct _NSZone * _Nullable)zone __attribute__((warn_unused_result("")));
 		[Export ("copyWithZone:")]
-		unsafe NSObject CopyWithZone ([NullAllowed] NSZone? zone);
+		unsafe NSObject Copy ([NullAllowed] NSZone? zone);
 
 		// -(instancetype _Nonnull)initWithEntries:(NSArray<ChartDataEntry *> * _Nonnull)entries label:(NSString * _Nonnull)label __attribute__((objc_designated_initializer));
 		[Export ("initWithEntries:label:")]
@@ -4676,7 +4676,7 @@ namespace Net.iOS.Charts
 
 		// -(id _Nonnull)copyWithZone:(struct _NSZone * _Nullable)zone __attribute__((warn_unused_result("")));
 		[Export ("copyWithZone:")]
-		unsafe NSObject CopyWithZone ([NullAllowed] NSZone? zone);
+		unsafe NSObject Copy ([NullAllowed] NSZone? zone);
 	}
 
 	// @interface LineRadarChartRenderer : LineScatterCandleRadarChartRenderer
@@ -5053,7 +5053,7 @@ namespace Net.iOS.Charts
 
 		// -(id _Nonnull)copyWithZone:(struct _NSZone * _Nullable)zone __attribute__((warn_unused_result("")));
 		[Export ("copyWithZone:")]
-		unsafe NSObject CopyWithZone ([NullAllowed] NSZone? zone);
+		unsafe NSObject Copy ([NullAllowed] NSZone? zone);
 	}
 
 	// protocol helper, see: https://github.com/xamarin/xamarin-macios/blob/main/docs/website/binding_types_reference_guide.md#protocols
@@ -5211,7 +5211,7 @@ namespace Net.iOS.Charts
 
 		// -(id _Nonnull)copyWithZone:(struct _NSZone * _Nullable)zone __attribute__((warn_unused_result("")));
 		[Export ("copyWithZone:")]
-		unsafe NSObject CopyWithZone ([NullAllowed] NSZone? zone);
+		unsafe NSObject Copy ([NullAllowed] NSZone? zone);
 	}
 
 	// @interface PieChartRenderer : NSObject <ChartDataRenderer>
@@ -5634,7 +5634,7 @@ namespace Net.iOS.Charts
 
 		// -(id _Nonnull)copyWithZone:(struct _NSZone * _Nullable)zone __attribute__((warn_unused_result("")));
 		[Export ("copyWithZone:")]
-		unsafe NSObject CopyWithZone ([NullAllowed] NSZone? zone);
+		unsafe NSObject Copy ([NullAllowed] NSZone? zone);
 	}
 
 	// protocol helper, see: https://github.com/xamarin/xamarin-macios/blob/main/docs/website/binding_types_reference_guide.md#protocols
@@ -5999,7 +5999,7 @@ namespace Net.iOS.Charts
 
 		// -(id _Nonnull)copyWithZone:(struct _NSZone * _Nullable)zone __attribute__((warn_unused_result("")));
 		[Export ("copyWithZone:")]
-		unsafe NSObject CopyWithZone ([NullAllowed] NSZone? zone);
+		unsafe NSObject Copy ([NullAllowed] NSZone? zone);
 
 		// -(instancetype _Nonnull)initWithEntries:(NSArray<ChartDataEntry *> * _Nonnull)entries label:(NSString * _Nonnull)label __attribute__((objc_designated_initializer));
 		[Export ("initWithEntries:label:")]
