@@ -4,6 +4,9 @@
         <Nullable>enable</Nullable>
         <ImplicitUsings>true</ImplicitUsings>
         <IsBindingProject>true</IsBindingProject>
+        
+        <!-- _HOTFIX: see https://github.com/xamarin/xamarin-macios/issues/16001#issuecomment-1396665648 -->
+        <NoBindingEmbedding>false</NoBindingEmbedding>
     </PropertyGroup>
 
     <ItemGroup>
