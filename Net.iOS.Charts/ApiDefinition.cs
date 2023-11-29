@@ -809,8 +809,19 @@ namespace Net.iOS.Charts
 
 		// @required @property (readonly, nonatomic, strong) ChartData * _Nullable data;
 		[Abstract]
-		[NullAllowed, Export ("data", ArgumentSemantic.Strong)]
-		ChartData Data { get; }
+		[NullAllowed, Export("data", ArgumentSemantic.Strong)]
+		ChartData Data
+		{
+			get;
+			
+			// _HOTFIX: original protocol does not have setter, but classes that conforms it (such as ChartViewBase) has.
+			// So in situation when class A conforms this protocol and adds setter, and there is protocol P that conforms
+			// this protocol (but without setter), and then class B inherits class A and conforms protocol P, then
+			// class B will have this member inlined as "new virtual" and without a setter.
+			// For example of such class B see LineChartView.
+			// See: https://github.com/xamarin/xamarin-macios/issues/3217
+            set;
+		}
 
 		// @required @property (readonly, nonatomic) NSInteger maxVisibleCount;
 		[Abstract]
@@ -1009,8 +1020,19 @@ namespace Net.iOS.Charts
 
 		// @required @property (readonly, nonatomic) enum AxisDependency axisDependency;
 		[Abstract]
-		[Export ("axisDependency")]
-		AxisDependency AxisDependency { get; }
+		[Export("axisDependency")]
+		AxisDependency AxisDependency
+		{
+			get;
+            
+			// _HOTFIX: original protocol does not have setter, but classes that conforms it (such as ChartBaseDataSet) has.
+			// So in situation when class A conforms this protocol and adds setter, and there is protocol P that conforms
+			// this protocol (but without setter), and then class B inherits class A and conforms protocol P, then
+			// class B will have this member inlined as "new virtual" and without a setter.
+			// For example of such class B see LineChartDataSet.
+			// See: https://github.com/xamarin/xamarin-macios/issues/3217
+			set;
+		}
 
 		// @required @property (readonly, copy, nonatomic) NSArray<UIColor *> * _Nonnull valueColors;
 		[Abstract]
@@ -1084,13 +1106,35 @@ namespace Net.iOS.Charts
 
 		// @required @property (readonly, nonatomic) CGFloat formSize;
 		[Abstract]
-		[Export ("formSize")]
-		nfloat FormSize { get; }
+		[Export("formSize")]
+		nfloat FormSize
+		{
+			get;
+			
+			// _HOTFIX: original protocol does not have setter, but classes that conforms it (such as ChartBaseDataSet) has.
+			// So in situation when class A conforms this protocol and adds setter, and there is protocol P that conforms
+			// this protocol (but without setter), and then class B inherits class A and conforms protocol P, then
+			// class B will have this member inlined as "new virtual" and without a setter.
+			// For example of such class B see LineChartDataSet.
+			// See: https://github.com/xamarin/xamarin-macios/issues/3217
+			set;
+		}
 
 		// @required @property (readonly, nonatomic) CGFloat formLineWidth;
 		[Abstract]
-		[Export ("formLineWidth")]
-		nfloat FormLineWidth { get; }
+		[Export("formLineWidth")]
+		nfloat FormLineWidth
+		{
+			get;
+			
+			// _HOTFIX: original protocol does not have setter, but classes that conforms it (such as ChartBaseDataSet) has.
+			// So in situation when class A conforms this protocol and adds setter, and there is protocol P that conforms
+			// this protocol (but without setter), and then class B inherits class A and conforms protocol P, then
+			// class B will have this member inlined as "new virtual" and without a setter.
+			// For example of such class B see LineChartDataSet.
+			// See: https://github.com/xamarin/xamarin-macios/issues/3217
+			set;
+		}
 
 		// @required @property (readonly, nonatomic) CGFloat formLineDashPhase;
 		[Abstract]
@@ -1099,8 +1143,19 @@ namespace Net.iOS.Charts
 
 		// @required @property (readonly, copy, nonatomic) NSArray<NSNumber *> * _Nullable formLineDashLengths;
 		[Abstract]
-		[NullAllowed, Export ("formLineDashLengths", ArgumentSemantic.Copy)]
-		NSNumber[] FormLineDashLengths { get; }
+		[NullAllowed, Export("formLineDashLengths", ArgumentSemantic.Copy)]
+		NSNumber[] FormLineDashLengths
+		{
+			get;
+            
+			// _HOTFIX: original protocol does not have setter, but classes that conforms it (such as ChartBaseDataSet) has.
+			// So in situation when class A conforms this protocol and adds setter, and there is protocol P that conforms
+			// this protocol (but without setter), and then class B inherits class A and conforms protocol P, then
+			// class B will have this member inlined as "new virtual" and without a setter.
+			// For example of such class B see LineChartDataSet.
+			// See: https://github.com/xamarin/xamarin-macios/issues/3217
+			set;
+		}
 
 		// @required @property (nonatomic) BOOL drawValuesEnabled;
 		[Abstract]
