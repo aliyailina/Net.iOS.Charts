@@ -24,3 +24,7 @@ It looks like it is because of reimplementation of `IChartViewProvider` interfac
 hence, inlining all its required properties (such as `Data`) with required signature (so without setter).
 Unfortunately, I haven't found any way to prevent this behavior and looks like there is no one for now.
 You can check open .NET iOS issue that is (probably) causing this: https://github.com/xamarin/xamarin-macios/issues/3217
+
+### Missing methods
+1. `SetColors(UIColor[] colors)` in `ChartBaseDataSet`.
+<br> Workaround: use `SetColors(UIColor[] colors, nfloat alpha)` with alpha 1.

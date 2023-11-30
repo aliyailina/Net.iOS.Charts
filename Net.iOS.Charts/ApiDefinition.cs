@@ -1409,6 +1409,8 @@ namespace Net.iOS.Charts
 		// -(void)setColors:(NSArray<UIColor *> * _Nonnull)colors alpha:(CGFloat)alpha;
 		[Export ("setColors:alpha:")]
 		void SetColors (UIColor[] colors, nfloat alpha);
+		
+		// _NOTE: missing SetColors(UIColor[] colors) method?
 
 		// @property (nonatomic) BOOL highlightEnabled;
 		[Export ("highlightEnabled")]
