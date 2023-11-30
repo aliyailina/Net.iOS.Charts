@@ -1648,7 +1648,7 @@ namespace Net.iOS.Charts
 
 	// @interface BarChartDataSet : BarLineScatterCandleBubbleChartDataSet <BarChartDataSetProtocol>
 	[BaseType (typeof(BarLineScatterCandleBubbleChartDataSet), Name = "_TtC8DGCharts15BarChartDataSet")]
-	interface BarChartDataSet : IBarChartDataSetProtocol
+	interface BarChartDataSet : BarChartDataSetProtocol
 	{
 		// -(instancetype _Nonnull)initWithEntries:(NSArray<ChartDataEntry *> * _Nonnull)entries label:(NSString * _Nonnull)label __attribute__((objc_designated_initializer));
 		[Export ("initWithEntries:label:")]
@@ -2649,7 +2649,7 @@ namespace Net.iOS.Charts
 	// @interface ChartHighlighter : NSObject <ChartHighlighter>
 	[BaseType (typeof(NSObject), Name = "_TtC8DGCharts16ChartHighlighter")]
 	[DisableDefaultCtor]
-	interface ChartHighlighter : IChartHighlighterProtocol
+	interface ChartHighlighter : ChartHighlighterProtocol
 	{
 		// @property (nonatomic, weak) id<ChartDataProvider> _Nullable chart;
 		[NullAllowed, Export ("chart", ArgumentSemantic.Weak)]
@@ -2787,7 +2787,7 @@ namespace Net.iOS.Charts
 
 	// @interface BubbleChartDataSet : BarLineScatterCandleBubbleChartDataSet <BubbleChartDataSetProtocol>
 	[BaseType (typeof(BarLineScatterCandleBubbleChartDataSet), Name = "_TtC8DGCharts18BubbleChartDataSet")]
-	interface BubbleChartDataSet : IBubbleChartDataSetProtocol
+	interface BubbleChartDataSet : BubbleChartDataSetProtocol
 	{
 		// @property (readonly, nonatomic) CGFloat maxSize;
 		[Export ("maxSize")]
@@ -2851,7 +2851,7 @@ namespace Net.iOS.Charts
 
 	// @interface BubbleChartView : BarLineChartViewBase <BubbleChartDataProvider>
 	[BaseType (typeof(BarLineChartViewBase), Name = "_TtC8DGCharts15BubbleChartView")]
-	interface BubbleChartView : IBubbleChartDataProvider
+	interface BubbleChartView : BubbleChartDataProvider
 	{
 		// @property (readonly, nonatomic, strong) BubbleChartData * _Nullable bubbleData;
 		[NullAllowed, Export ("bubbleData", ArgumentSemantic.Strong)]
@@ -3085,7 +3085,7 @@ namespace Net.iOS.Charts
 
 	// @interface CandleChartDataSet : LineScatterCandleRadarChartDataSet <CandleChartDataSetProtocol>
 	[BaseType (typeof(LineScatterCandleRadarChartDataSet), Name = "_TtC8DGCharts18CandleChartDataSet")]
-	interface CandleChartDataSet : ICandleChartDataSetProtocol
+	interface CandleChartDataSet : CandleChartDataSetProtocol
 	{
 		// -(instancetype _Nonnull)initWithEntries:(NSArray<ChartDataEntry *> * _Nonnull)entries label:(NSString * _Nonnull)label __attribute__((objc_designated_initializer));
 		[Export ("initWithEntries:label:")]
@@ -3194,7 +3194,7 @@ namespace Net.iOS.Charts
 
 	// @interface CandleStickChartView : BarLineChartViewBase <CandleChartDataProvider>
 	[BaseType (typeof(BarLineChartViewBase), Name = "_TtC8DGCharts20CandleStickChartView")]
-	interface CandleStickChartView : ICandleChartDataProvider
+	interface CandleStickChartView : CandleChartDataProvider
 	{
 		// @property (readonly, nonatomic, strong) CandleChartData * _Nullable candleData;
 		[NullAllowed, Export ("candleData", ArgumentSemantic.Strong)]
@@ -3412,7 +3412,7 @@ namespace Net.iOS.Charts
 
 	// @interface ChevronDownShapeRenderer : NSObject <ShapeRenderer>
 	[BaseType (typeof(NSObject), Name = "_TtC8DGCharts24ChevronDownShapeRenderer")]
-	interface ChevronDownShapeRenderer : IShapeRenderer
+	interface ChevronDownShapeRenderer : ShapeRenderer
 	{
 		// -(void)renderShapeWithContext:(CGContextRef _Nonnull)context dataSet:(id<ScatterChartDataSetProtocol> _Nonnull)dataSet viewPortHandler:(ChartViewPortHandler * _Nonnull)viewPortHandler point:(CGPoint)point color:(UIColor * _Nonnull)color;
 		[Export ("renderShapeWithContext:dataSet:viewPortHandler:point:color:")]
@@ -3421,7 +3421,7 @@ namespace Net.iOS.Charts
 
 	// @interface ChevronUpShapeRenderer : NSObject <ShapeRenderer>
 	[BaseType (typeof(NSObject), Name = "_TtC8DGCharts22ChevronUpShapeRenderer")]
-	interface ChevronUpShapeRenderer : IShapeRenderer
+	interface ChevronUpShapeRenderer : ShapeRenderer
 	{
 		// -(void)renderShapeWithContext:(CGContextRef _Nonnull)context dataSet:(id<ScatterChartDataSetProtocol> _Nonnull)dataSet viewPortHandler:(ChartViewPortHandler * _Nonnull)viewPortHandler point:(CGPoint)point color:(UIColor * _Nonnull)color;
 		[Export ("renderShapeWithContext:dataSet:viewPortHandler:point:color:")]
@@ -3430,7 +3430,7 @@ namespace Net.iOS.Charts
 
 	// @interface CircleShapeRenderer : NSObject <ShapeRenderer>
 	[BaseType (typeof(NSObject), Name = "_TtC8DGCharts19CircleShapeRenderer")]
-	interface CircleShapeRenderer : IShapeRenderer
+	interface CircleShapeRenderer : ShapeRenderer
 	{
 		// -(void)renderShapeWithContext:(CGContextRef _Nonnull)context dataSet:(id<ScatterChartDataSetProtocol> _Nonnull)dataSet viewPortHandler:(ChartViewPortHandler * _Nonnull)viewPortHandler point:(CGPoint)point color:(UIColor * _Nonnull)color;
 		[Export ("renderShapeWithContext:dataSet:viewPortHandler:point:color:")]
@@ -3763,7 +3763,7 @@ namespace Net.iOS.Charts
 
 	// @interface CrossShapeRenderer : NSObject <ShapeRenderer>
 	[BaseType (typeof(NSObject), Name = "_TtC8DGCharts18CrossShapeRenderer")]
-	interface CrossShapeRenderer : IShapeRenderer
+	interface CrossShapeRenderer : ShapeRenderer
 	{
 		// -(void)renderShapeWithContext:(CGContextRef _Nonnull)context dataSet:(id<ScatterChartDataSetProtocol> _Nonnull)dataSet viewPortHandler:(ChartViewPortHandler * _Nonnull)viewPortHandler point:(CGPoint)point color:(UIColor * _Nonnull)color;
 		[Export ("renderShapeWithContext:dataSet:viewPortHandler:point:color:")]
@@ -3793,7 +3793,7 @@ namespace Net.iOS.Charts
 
 	// @interface ChartDefaultAxisValueFormatter : NSObject <ChartAxisValueFormatter>
 	[BaseType (typeof(NSObject))]
-	interface ChartDefaultAxisValueFormatter : IChartAxisValueFormatter
+	interface ChartDefaultAxisValueFormatter : ChartAxisValueFormatter
 	{
 		// @property (copy, nonatomic) NSString * _Nonnull (^ _Nullable)(double, ChartAxisBase * _Nullable) block;
 		[NullAllowed, Export ("block", ArgumentSemantic.Copy)]
@@ -3887,7 +3887,7 @@ namespace Net.iOS.Charts
 
 	// @interface ChartDefaultValueFormatter : NSObject <ChartValueFormatter>
 	[BaseType (typeof(NSObject))]
-	interface ChartDefaultValueFormatter : IChartValueFormatter
+	interface ChartDefaultValueFormatter : ChartValueFormatter
 	{
 		// @property (copy, nonatomic) NSString * _Nonnull (^ _Nullable)(double, ChartDataEntry * _Nonnull, NSInteger, ChartViewPortHandler * _Nullable) block;
 		[NullAllowed, Export ("block", ArgumentSemantic.Copy)]
@@ -4179,7 +4179,7 @@ namespace Net.iOS.Charts
 
 	// @interface ChartIndexAxisValueFormatter : NSObject <ChartAxisValueFormatter>
 	[BaseType (typeof(NSObject))]
-	interface ChartIndexAxisValueFormatter : IChartAxisValueFormatter
+	interface ChartIndexAxisValueFormatter : ChartAxisValueFormatter
 	{
 		// @property (copy, nonatomic) NSArray<NSString *> * _Nonnull values;
 		[Export ("values", ArgumentSemantic.Copy)]
@@ -4861,7 +4861,7 @@ namespace Net.iOS.Charts
 
 	// @interface ChartMarkerImage : NSObject <ChartMarker>
 	[BaseType (typeof(NSObject))]
-	interface ChartMarkerImage : IChartMarker
+	interface ChartMarkerImage : ChartMarker
 	{
 		// @property (nonatomic, strong) UIImage * _Nullable image;
 		[NullAllowed, Export ("image", ArgumentSemantic.Strong)]
@@ -4894,7 +4894,7 @@ namespace Net.iOS.Charts
 
 	// @interface ChartMarkerView : NSUIView <ChartMarker>
 	[BaseType (typeof(NSUIView))]
-	interface ChartMarkerView : IChartMarker
+	interface ChartMarkerView : ChartMarker
 	{
 		// @property (nonatomic) CGPoint offset;
 		[Export ("offset", ArgumentSemantic.Assign)]
@@ -5197,7 +5197,7 @@ namespace Net.iOS.Charts
 
 	// @interface PieChartDataSet : ChartDataSet <PieChartDataSetProtocol>
 	[BaseType (typeof(ChartDataSet), Name = "_TtC8DGCharts15PieChartDataSet")]
-	interface PieChartDataSet : IPieChartDataSetProtocol
+	interface PieChartDataSet : PieChartDataSetProtocol
 	{
 		// -(instancetype _Nonnull)initWithEntries:(NSArray<ChartDataEntry *> * _Nonnull)entries label:(NSString * _Nonnull)label __attribute__((objc_designated_initializer));
 		[Export ("initWithEntries:label:")]
@@ -5743,7 +5743,7 @@ namespace Net.iOS.Charts
 
 	// @interface RadarChartDataSet : LineRadarChartDataSet <RadarChartDataSetProtocol>
 	[BaseType (typeof(LineRadarChartDataSet), Name = "_TtC8DGCharts17RadarChartDataSet")]
-	interface RadarChartDataSet : IRadarChartDataSetProtocol
+	interface RadarChartDataSet : RadarChartDataSetProtocol
 	{
 		// -(instancetype _Nonnull)initWithEntries:(NSArray<ChartDataEntry *> * _Nonnull)entries label:(NSString * _Nonnull)label __attribute__((objc_designated_initializer));
 		[Export ("initWithEntries:label:")]
@@ -6025,7 +6025,7 @@ namespace Net.iOS.Charts
 
 	// @interface ScatterChartDataSet : LineScatterCandleRadarChartDataSet <ScatterChartDataSetProtocol>
 	[BaseType (typeof(LineScatterCandleRadarChartDataSet), Name = "_TtC8DGCharts19ScatterChartDataSet")]
-	interface ScatterChartDataSet : IScatterChartDataSetProtocol
+	interface ScatterChartDataSet : ScatterChartDataSetProtocol
 	{
 		// @property (nonatomic) CGFloat scatterShapeSize;
 		[Export ("scatterShapeSize")]
@@ -6098,7 +6098,7 @@ namespace Net.iOS.Charts
 
 	// @interface ScatterChartView : BarLineChartViewBase <ScatterChartDataProvider>
 	[BaseType (typeof(BarLineChartViewBase), Name = "_TtC8DGCharts16ScatterChartView")]
-	interface ScatterChartView : IScatterChartDataProvider
+	interface ScatterChartView : ScatterChartDataProvider
 	{
 		// @property (readonly, nonatomic, strong) ScatterChartData * _Nullable scatterData;
 		[NullAllowed, Export ("scatterData", ArgumentSemantic.Strong)]
@@ -6112,7 +6112,7 @@ namespace Net.iOS.Charts
 
 	// @interface SquareShapeRenderer : NSObject <ShapeRenderer>
 	[BaseType (typeof(NSObject), Name = "_TtC8DGCharts19SquareShapeRenderer")]
-	interface SquareShapeRenderer : IShapeRenderer
+	interface SquareShapeRenderer : ShapeRenderer
 	{
 		// -(void)renderShapeWithContext:(CGContextRef _Nonnull)context dataSet:(id<ScatterChartDataSetProtocol> _Nonnull)dataSet viewPortHandler:(ChartViewPortHandler * _Nonnull)viewPortHandler point:(CGPoint)point color:(UIColor * _Nonnull)color;
 		[Export ("renderShapeWithContext:dataSet:viewPortHandler:point:color:")]
@@ -6174,7 +6174,7 @@ namespace Net.iOS.Charts
 
 	// @interface TriangleShapeRenderer : NSObject <ShapeRenderer>
 	[BaseType (typeof(NSObject), Name = "_TtC8DGCharts21TriangleShapeRenderer")]
-	interface TriangleShapeRenderer : IShapeRenderer
+	interface TriangleShapeRenderer : ShapeRenderer
 	{
 		// -(void)renderShapeWithContext:(CGContextRef _Nonnull)context dataSet:(id<ScatterChartDataSetProtocol> _Nonnull)dataSet viewPortHandler:(ChartViewPortHandler * _Nonnull)viewPortHandler point:(CGPoint)point color:(UIColor * _Nonnull)color;
 		[Export ("renderShapeWithContext:dataSet:viewPortHandler:point:color:")]
@@ -6700,7 +6700,7 @@ namespace Net.iOS.Charts
 
 	// @interface XShapeRenderer : NSObject <ShapeRenderer>
 	[BaseType (typeof(NSObject), Name = "_TtC8DGCharts14XShapeRenderer")]
-	interface XShapeRenderer : IShapeRenderer
+	interface XShapeRenderer : ShapeRenderer
 	{
 		// -(void)renderShapeWithContext:(CGContextRef _Nonnull)context dataSet:(id<ScatterChartDataSetProtocol> _Nonnull)dataSet viewPortHandler:(ChartViewPortHandler * _Nonnull)viewPortHandler point:(CGPoint)point color:(UIColor * _Nonnull)color;
 		[Export ("renderShapeWithContext:dataSet:viewPortHandler:point:color:")]
