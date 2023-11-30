@@ -413,7 +413,7 @@ namespace Net.iOS.Charts
 		// @required -(NSString * _Nonnull)stringForValue:(double)value axis:(ChartAxisBase * _Nullable)axis __attribute__((warn_unused_result("")));
 		[Abstract]
 		[Export ("stringForValue:axis:")]
-		string Axis (double value, [NullAllowed] ChartAxisBase axis);
+		string StringForValue (double value, [NullAllowed] ChartAxisBase axis);
 	}
 
 	// @interface ChartData : NSObject
@@ -3407,7 +3407,7 @@ namespace Net.iOS.Charts
 		// @required -(void)renderShapeWithContext:(CGContextRef _Nonnull)context dataSet:(id<ScatterChartDataSetProtocol> _Nonnull)dataSet viewPortHandler:(ChartViewPortHandler * _Nonnull)viewPortHandler point:(CGPoint)point color:(UIColor * _Nonnull)color;
 		[Abstract]
 		[Export ("renderShapeWithContext:dataSet:viewPortHandler:point:color:")]
-		void DataSet (CGContext context, IScatterChartDataSetProtocol dataSet, ChartViewPortHandler viewPortHandler, CGPoint point, UIColor color);
+		void RenderShapeWithContext (CGContext context, IScatterChartDataSetProtocol dataSet, ChartViewPortHandler viewPortHandler, CGPoint point, UIColor color);
 	}
 
 	// @interface ChevronDownShapeRenderer : NSObject <ShapeRenderer>
@@ -3882,7 +3882,7 @@ namespace Net.iOS.Charts
 		// @required -(NSString * _Nonnull)stringForValue:(double)value entry:(ChartDataEntry * _Nonnull)entry dataSetIndex:(NSInteger)dataSetIndex viewPortHandler:(ChartViewPortHandler * _Nullable)viewPortHandler __attribute__((warn_unused_result("")));
 		[Abstract]
 		[Export ("stringForValue:entry:dataSetIndex:viewPortHandler:")]
-		string Entry (double value, ChartDataEntry entry, nint dataSetIndex, [NullAllowed] ChartViewPortHandler viewPortHandler);
+		string StringForValue (double value, ChartDataEntry entry, nint dataSetIndex, [NullAllowed] ChartViewPortHandler viewPortHandler);
 	}
 
 	// @interface ChartDefaultValueFormatter : NSObject <ChartValueFormatter>
