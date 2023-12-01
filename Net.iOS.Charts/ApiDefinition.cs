@@ -710,6 +710,7 @@ namespace Net.iOS.Charts
 		[Export ("initWithX:y:icon:data:")]
 		NativeHandle Constructor (double x, double y, [NullAllowed] UIImage icon, [NullAllowed] NSObject data);
 
+		// _NOTE: use params instead of array?
 		// -(instancetype _Nonnull)initWithX:(double)x yValues:(NSArray<NSNumber *> * _Nonnull)yValues __attribute__((objc_designated_initializer));
 		[Export ("initWithX:yValues:")]
 		[DesignatedInitializer]
@@ -3735,6 +3736,7 @@ namespace Net.iOS.Charts
 		[Export ("isDrawBarShadowEnabled")]
 		bool IsDrawBarShadowEnabled { get; }
 
+		// _NOTE: takes CombinedChartDrawOrder enum as values, change the type?
 		// @property (copy, nonatomic) NSArray<NSNumber *> * _Nonnull drawOrder;
 		[Export ("drawOrder", ArgumentSemantic.Copy)]
 		NSNumber[] DrawOrder { get; set; }
