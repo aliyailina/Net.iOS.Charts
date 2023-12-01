@@ -6,4 +6,7 @@
         <ImplicitUsings>true</ImplicitUsings>
         <SupportedOSPlatformVersion>13.0</SupportedOSPlatformVersion>
     </PropertyGroup>
+    <ItemGroup>
+      <PackageReference Include="Net.iOS.Charts" Version="0.0.1-beta" />
+    </ItemGroup>
 </Project>
