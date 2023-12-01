@@ -1039,10 +1039,16 @@ namespace Net.iOS.Charts
 		[Export ("valueColors", ArgumentSemantic.Copy)]
 		UIColor[] ValueColors { get; }
 
+		// _HOTFIX: original protocol does not have setter, but classes that conforms it (such as ChartBaseDataSet) has.
+		// So in situation when class A conforms this protocol and adds setter, and there is protocol P that conforms
+		// this protocol (but without setter), and then class B inherits class A and conforms protocol P, then
+		// class B will have this member inlined as "new virtual" and without a setter.
+		// For example of such class B see BarChartDataSet.
+		// See: https://github.com/xamarin/xamarin-macios/issues/3217
 		// @required @property (readonly, copy, nonatomic) NSArray<UIColor *> * _Nonnull colors;
 		[Abstract]
 		[Export ("colors", ArgumentSemantic.Copy)]
-		UIColor[] Colors { get; }
+		UIColor[] Colors { get; set; }
 
 		// @required -(UIColor * _Nonnull)colorAtIndex:(NSInteger)atIndex __attribute__((warn_unused_result("")));
 		[Abstract]
@@ -1409,8 +1415,6 @@ namespace Net.iOS.Charts
 		// -(void)setColors:(NSArray<UIColor *> * _Nonnull)colors alpha:(CGFloat)alpha;
 		[Export ("setColors:alpha:")]
 		void SetColors (UIColor[] colors, nfloat alpha);
-		
-		// _NOTE: missing SetColors(UIColor[] colors) method?
 
 		// @property (nonatomic) BOOL highlightEnabled;
 		[Export ("highlightEnabled")]

@@ -131,8 +131,7 @@ public sealed partial class BarChartViewController : DemoBaseViewController, ICh
         else
         {
             set1 = new BarChartDataSet(yVals.ToArray(), "The year 2017");
-            // _HOTFIX: looks like SetColors(UIColor[] colors) is missing
-            set1.SetColors(ChartColorTemplates.Material, 1);
+            set1.Colors = ChartColorTemplates.Material;
             set1.DrawIconsEnabled = false;
 
             var dataSets = new IChartDataSetProtocol[] { set1 };
