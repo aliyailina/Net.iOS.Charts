@@ -1,4 +1,6 @@
-# Known issues
+This is .NET iOS binding of [danielgindi iOS Charts (DGCharts) library](https://github.com/danielgindi/Charts)
+
+## Known issues
 
 ### Sometimes GC can remove class reference of value of properties, which declared type is protocol interfaces.
 You can observe this issue in DataSets property of any ChartDataSet subclass. Create some set
