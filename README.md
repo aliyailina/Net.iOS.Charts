@@ -1,5 +1,10 @@
 This is .NET iOS binding of [danielgindi iOS Charts (DGCharts) library](https://github.com/danielgindi/Charts)
 
+## Be aware, library is beta
+
+Not all functionality may be available (like, some setters missing or something) and not all demos and no tests was
+ported to C#. If you observe any problem – open new issue to prioritize its fix.
+
 ## Known issues
 
 ### Sometimes GC can remove class reference of value of properties, which declared type is protocol interfaces.
