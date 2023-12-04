@@ -7,6 +7,17 @@
         
         <!-- _HOTFIX: see https://github.com/xamarin/xamarin-macios/issues/16001#issuecomment-1396665648 -->
         <NoBindingEmbedding>false</NoBindingEmbedding>
+        <Version>0.0.1-beta2</Version>
+        <Title>Net.iOS.Charts</Title>
+        <Authors>aliya_ilina</Authors>
+        <Description>Daniel Gindi iOS Charts (DGCharts) library port for .NET iOS (Xamarin.iOS)</Description>
+        <Copyright>aliya_ilina, Daniel Cohen Gindi &amp; Philipp Jahoda</Copyright>
+        <PackageProjectUrl>https://github.com/aliyailina/Net.iOS.Charts</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/aliyailina/Net.iOS.Charts</RepositoryUrl>
+        <PackageTags>.NET.iOS Xamarin.iOS iOS Graphs Charts</PackageTags>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
+        <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
     </PropertyGroup>
 
     <ItemGroup>
@@ -16,5 +27,10 @@
 
     <ItemGroup>
         <NativeReference Include="DGCharts.framework" Kind="Framework"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Include="$(SolutionDir)LICENSE.md" Pack="true" PackagePath=""/>
+        <None Include="$(SolutionDir)README.md" Pack="true" PackagePath=""/>
     </ItemGroup>
 </Project>
