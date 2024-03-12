@@ -7,7 +7,7 @@
         
         <!-- _HOTFIX: see https://github.com/xamarin/xamarin-macios/issues/16001#issuecomment-1396665648 -->
         <NoBindingEmbedding>false</NoBindingEmbedding>
-        <Version>0.0.1-beta2</Version>
+        <Version>0.0.1-beta3</Version>
         <Title>Net.iOS.Charts</Title>
         <Authors>aliya_ilina</Authors>
         <Description>Daniel Gindi iOS Charts (DGCharts) library port for .NET iOS (Xamarin.iOS)</Description>
