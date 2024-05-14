@@ -30,4 +30,21 @@ protocol and, moreover, has setter for `Data` property, but `LineChartView`, tha
 It looks like it is because of reimplementation of `IChartViewProvider` interface (of `ChartViewProvider` protocol) and,
 hence, inlining all its required properties (such as `Data`) with required signature (so without setter).
 Unfortunately, I haven't found any way to prevent this behavior and looks like there is no one for now.
-You can check open .NET iOS issue that is (probably) causing this: https://github.com/xamarin/xamarin-macios/issues/3217
+You can check open [.NET iOS issue](https://github.com/xamarin/xamarin-macios/issues/3217) that is (probably) causing this.
+
+### ChartsVersionNumber and ChartsVersionString are not available
+Including these two properties may result in build fail for app that uses library. Looks like it is because of recent fix for .NET (see same [.NET 8 issue](https://github.com/xamarin/xamarin-macios/issues/20458))
+Recommendation from .NET was to use .xcframework to fix issue, but it didn't work. It was decided to exclude these properties as they are not expected to be frequently used. If you really require them, please, open an issue please.
+```csharp
+[Static]
+partial interface Constants
+{
+    // extern double ChartsVersionNumber;
+    [Field ("ChartsVersionNumber", "__Internal")]
+    double ChartsVersionNumber { get; }
+    
+    // extern const unsigned char[] ChartsVersionString;
+    [Field ("ChartsVersionString", "__Internal")]
+    NSString ChartsVersionString { get; }
+}
+```

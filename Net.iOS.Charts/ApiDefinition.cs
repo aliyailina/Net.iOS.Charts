@@ -7,18 +7,6 @@ using UIKit;
 
 namespace Net.iOS.Charts
 {
-	[Static]
-	partial interface Constants
-	{
-		// extern double ChartsVersionNumber;
-		[Field ("ChartsVersionNumber", "__Internal")]
-		double ChartsVersionNumber { get; }
-
-		// extern const unsigned char[] ChartsVersionString;
-		[Field ("ChartsVersionString", "__Internal")]
-		NSString ChartsVersionString { get; }
-	}
-
 	// @interface ChartViewPortJob : NSObject
 	[BaseType (typeof(NSObject))]
 	[DisableDefaultCtor]
