@@ -7,7 +7,7 @@
         
         <!-- required for xcframeworks: https://github.com/xamarin/xamarin-macios/issues/10774#issuecomment-791518403 -->
         <NoBindingEmbedding>true</NoBindingEmbedding>
-        <Version>0.0.1-beta3</Version>
+        <Version>0.0.1-beta4</Version>
         <Title>Net.iOS.Charts</Title>
         <Authors>aliya_ilina</Authors>
         <Description>Daniel Gindi iOS Charts (DGCharts) library port for .NET iOS (Xamarin.iOS)</Description>
