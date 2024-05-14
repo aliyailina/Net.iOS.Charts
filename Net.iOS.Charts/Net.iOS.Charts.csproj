@@ -5,8 +5,8 @@
         <ImplicitUsings>true</ImplicitUsings>
         <IsBindingProject>true</IsBindingProject>
         
-        <!-- _HOTFIX: see https://github.com/xamarin/xamarin-macios/issues/16001#issuecomment-1396665648 -->
-        <NoBindingEmbedding>false</NoBindingEmbedding>
+        <!-- required for xcframeworks: https://github.com/xamarin/xamarin-macios/issues/10774#issuecomment-791518403 -->
+        <NoBindingEmbedding>true</NoBindingEmbedding>
         <Version>0.0.1-beta3</Version>
         <Title>Net.iOS.Charts</Title>
         <Authors>aliya_ilina</Authors>
@@ -26,7 +26,7 @@
     </ItemGroup>
 
     <ItemGroup>
-        <NativeReference Include="DGCharts.framework" Kind="Framework"/>
+        <NativeReference Include="DGCharts.xcframework" Kind="Framework"/>
     </ItemGroup>
 
     <ItemGroup>
